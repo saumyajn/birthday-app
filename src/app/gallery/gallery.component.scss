@@ -1,0 +1,17 @@
+.flex-container {
+    display: flex;
+    height: 40px;
+    justify-content: space-around;
+    flex-flow: row wrap;
+}
+
+div {
+
+    text-align: center;
+    margin: auto;
+}
+
+.img-flex {
+    margin-top: 200px;
+    width: 60vw;
+}
