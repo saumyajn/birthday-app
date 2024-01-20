@@ -2,11 +2,12 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
 import { MatButtonModule } from '@angular/material/button';
-import { RouterOutlet, RouterLink, RouterLinkActive, ActivatedRoute, Router } from '@angular/router';
+import { MatIconModule } from '@angular/material/icon';
+import { RouterOutlet, RouterLink, RouterLinkActive, Router } from '@angular/router';
 @Component({
   selector: 'app-home-page',
   standalone: true,
-  imports: [MatButtonModule, CommonModule, RouterOutlet, RouterLink, RouterLinkActive],
+  imports: [MatButtonModule, CommonModule, MatIconModule,RouterOutlet, RouterLink, RouterLinkActive],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.scss'
 })

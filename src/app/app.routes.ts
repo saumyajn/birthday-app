@@ -5,12 +5,16 @@ import { GalleryComponent } from './gallery/gallery.component';
 
 export const routes: Routes = [
     {
-        path: "", 
-        pathMatch:"full",
+        path: "",
+        pathMatch: "full",
         component: HomePageComponent
     },
     {
         path: "happy-birthday",
         component: GalleryComponent
+    },
+    {
+        path: 'blow-candles',
+        component: CandlesComponent
     }
 ];

@@ -1,10 +1,13 @@
 import { CUSTOM_ELEMENTS_SCHEMA, Component, ElementRef, Renderer2 } from '@angular/core';
-
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { ActivatedRoute, Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-banner',
   standalone: true,
-  imports: [],
-  schemas:[CUSTOM_ELEMENTS_SCHEMA],
+  imports: [MatIconModule, MatButtonModule, RouterOutlet, CommonModule, RouterLink, RouterLinkActive],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './banner.component.html',
   styleUrl: './banner.component.scss'
 })
@@ -13,7 +16,7 @@ export class BannerComponent {
   secPerChar: number = 0.15;
   secBtwWord: number = 1.5;
   textIndex: number = 0;
-  constructor(private el: ElementRef, private ren: Renderer2) {
+  constructor(private router: Router) {
 
   }
   ngOnInit(): void {
@@ -63,6 +66,7 @@ export class BannerComponent {
       this.secPerChar * 1000)
 
   }
+
 }
 
 
