@@ -161,7 +161,7 @@ main {
 }
 
 .candles {
-    background-color: #7B020B;
+    background-color: #02387b;
     width: 16px;
     height: 55px;
     border-radius: 8px / 4px;
@@ -178,7 +178,7 @@ main {
         width: 16px;
         height: 8px;
         border-radius: 50%;
-        background-color: lighten(#7B020B, 10%);
+        background-color: lighten(#02387b, 10%);
     }
 }
 
@@ -261,9 +261,9 @@ main {
     transform: translate(-50%, -50%);
     // letter-spacing: 0.02em;
     // text-align: center;
-    color: #3f8dfb;
-    text-shadow: 5px 5px 0px #f7a839,
-        10px 10px 0px #f8c94a,
-        15px 15px 0px #FF80BF,
+    color: #02387b;
+    text-shadow: 5px 5px 0px #39a5f7,
+        10px 10px 0px #4af8f8,
+        15px 15px 0px #cc80ff,
         // 20px 20px 0px #EF5097,
 }

@@ -20,7 +20,7 @@ export class HomePageComponent implements OnInit {
   openTopBoxClass = "top-gift "
   openMiddleBoxClass = "middle-gift"
   openBottomBoxClass = "bottom-gift"
-  title = 'simple-portfolio';
+  title = 'happy-birthday';
   ngOnInit(): void {
 
   }
