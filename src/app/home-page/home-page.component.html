@@ -1,0 +1,13 @@
+<main>
+  <h1 mat-button class="clickButton" (click)="this.openbox()">Open the box</h1>
+  <div class="gift-box" [ngClass]="clickBoxClass" (click)="this.openbox()">
+    <div [ngClass]="bowClass">
+      <div class="bow-left"></div>
+      <div class="bow-right"></div>
+    </div>
+    <div [ngClass]="openTopBoxClass"></div>
+    <div [ngClass]="openMiddleBoxClass"></div>
+    <div [ngClass]="openBottomBoxClass"></div>
+  </div>
+</main>
+

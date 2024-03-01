@@ -1,5 +1,5 @@
 {
-  "name": "simple-portfolio",
+  "name": "happy-birthday",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:simple-portfolio": "node dist/simple-portfolio/server/server.mjs"
+    "serve:ssr:happy-birthday": "node dist/happy-birthday/server/server.mjs"
   },
   "private": true,
   "dependencies": {

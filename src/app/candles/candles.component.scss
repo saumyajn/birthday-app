@@ -1,0 +1,269 @@
+$chocolate: #653301;
+$icing: rgb(176, 112, 48);
+
+main {
+    background: rgba(76, 106, 225, 0.26);
+    height: 78%;
+}
+
+.full-cake {
+    // height: 75vh;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+
+
+}
+
+
+@mixin foodColoring($color) {
+    background-color: $color;
+    box-shadow:
+        0 4px 0px lighten($color, 15%),
+        0 4px 0px darken($color, 8.2%),
+        0 6px 0px darken($color, 8.4%),
+        0 8px 0px darken($color, 8.6%),
+        0 10px 0px darken($color, 8.8%),
+        0 12px 0px darken($color, 9%),
+        0 14px 0px darken($color, 9.2%),
+        0 16px 0px darken($color, 9.4%),
+        0 18px 0px darken($color, 9.6%),
+        0 20px 0px darken($color, 9.8%),
+        0 22px 0px darken($color, 10%),
+        0 24px 0px darken($color, 10.2%),
+        0 26px 0px darken($color, 10.4%),
+        0 28px 0px darken($color, 10.6%),
+        0 30px 0px darken($color, 10.8%);
+}
+
+.full-cake>* {
+
+    position: absolute;
+}
+
+
+.cake {
+
+    position: absolute;
+    display: block;
+    width: 250px;
+    height: 100px;
+    // background: $chocolate;
+    border-radius: 50%;
+    @include foodColoring($chocolate);
+}
+
+.cake-top {
+    top: 0px;
+    animation: load 4s ease-in;
+
+}
+
+.cake-middle {
+    top: 33px;
+    animation: load 3s ease-in;
+}
+
+.cake-bottom {
+    top: 66px;
+    animation: load 2s ease-in
+}
+
+@keyframes load {
+    0% {
+        transform: translateY(-500px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+
+    }
+}
+
+.icing {
+    top: 2px;
+    left: 5px;
+    background-color: $icing;
+    width: 240px;
+    height: 90px;
+    border-radius: 50%;
+    animation: load 5s ease-in;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 4px;
+        right: 5px;
+        bottom: 6px;
+        left: 5px;
+        background-color: lighten($icing, 3%);
+
+        box-shadow:
+            0 0 4px lighten($icing, 5%),
+            0 0 4px lighten($icing, 5%),
+            0 0 4px lighten($icing, 5%);
+        border-radius: 50%;
+        z-index: 1;
+    }
+}
+
+.drip {
+    display: block;
+    width: 50px;
+    height: 60px;
+    animation: load 5s ease-in;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    background-color: $icing;
+}
+
+.drip1 {
+    top: 53px;
+    left: 5px;
+    transform: skewY((15deg));
+    height: 55px;
+    width: 20px;
+}
+
+.drip2 {
+    top: 60px;
+    left: 40px;
+    transform: skewY((-1deg));
+    height: 75px;
+    width: 10px;
+}
+
+.drip3 {
+    top: 53px;
+    left: 76px;
+    height: 60px;
+    width: 70px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+
+}
+
+.drip4 {
+    top: 60px;
+    left: 150px;
+    transform: skewY((5deg));
+    height: 55px;
+    width: 40px;
+}
+
+.drip5 {
+    top: 50px;
+    left: 220px;
+    height: 80px;
+    width: 25px;
+}
+
+.candles {
+    background-color: #02387b;
+    width: 16px;
+    height: 55px;
+    border-radius: 8px / 4px;
+    margin-left: 115px;
+    top: -20px;
+    z-index: 10;
+    animation: load 6s ease-in;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 16px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: lighten(#02387b, 10%);
+    }
+}
+
+.flame {
+    position: absolute;
+    background-color: rgb(251, 167, 12);
+    width: 15px;
+    height: 35px;
+    border-radius: 10px 10px 10px 10px / 25px 25px 10px 10px;
+    top: -34px;
+    left: 50%;
+    margin-left: -7.5px;
+    z-index: 10;
+    box-shadow:
+        0 0 10px rgba(orange, 0.5),
+        0 0 20px rgba(orange, 0.5),
+        0 0 60px rgba(orange, 0.5),
+        0 0 80px rgba(orange, 0.5);
+    transform-origin: 50% 90%;
+    animation: flicker 1s ease-in-out alternate infinite;
+}
+
+@keyframes flicker {
+    0% {
+        transform: skewX(5deg);
+        box-shadow:
+            0 0 10px rgba(rgb(255, 130, 0), 0.2),
+            0 0 20px rgba(orange, 0.2),
+            0 0 60px rgba(orange, 0.2),
+            0 0 80px rgba(orange, 0.2)
+    }
+
+    25% {
+        transform: skewX(-5deg);
+        box-shadow:
+            0 0 10px rgba(rgb(255, 119, 0), 0.5),
+            0 0 20px rgba(orange, 0.5),
+            0 0 60px rgba(orange, 0.5),
+            0 0 80px rgba(orange, 0.5)
+    }
+
+    50% {
+        transform: skewX(10deg);
+        box-shadow:
+            0 0 10px rgba(rgb(255, 119, 0), 0.3),
+            0 0 20px rgba(orange, 0.3),
+            0 0 60px rgba(orange, 0.3),
+            0 0 80px rgba(orange, 0.3)
+    }
+
+    75% {
+        transform: skewX(-10deg);
+        box-shadow:
+            0 0 10px rgba(orange, 0.4),
+            0 0 20px rgba(orange, 0.4),
+            0 0 60px rgba(orange, 0.4),
+            0 0 80px rgba(orange, 0.4)
+    }
+
+    100% {
+        transform: skewX(5deg);
+        box-shadow:
+            0 0 10px rgba(orange, 0.5),
+            0 0 20px rgba(orange, 0.5),
+            0 0 60px rgba(orange, 0.5),
+            0 0 80px rgba(orange, 0.5)
+    }
+}
+
+.center {
+    font-family: 'Calligraffitti', cursive;
+    font-weight: 700;
+    font-size: 3rem;
+    position: absolute;
+    text-shadow: -15px 5px 20px #ced0d3;
+    ;
+    top: 30%;
+    left: 50%;
+    text-align-last: center;
+    transform: translate(-50%, -50%);
+    // letter-spacing: 0.02em;
+    // text-align: center;
+    color: #02387b;
+    text-shadow: 5px 5px 0px #39a5f7,
+        10px 10px 0px #4af8f8,
+        15px 15px 0px #cc80ff,
+        // 20px 20px 0px #EF5097,
+}
